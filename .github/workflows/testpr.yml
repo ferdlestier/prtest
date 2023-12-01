@@ -1,0 +1,15 @@
+name: Testing PR Close
+
+on:
+ pull_request:
+  types:
+   - closed
+  branches:
+   - develop
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+     - name: On close
+       run: echo "Triggered on PR Close"
